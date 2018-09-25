@@ -5,9 +5,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
 /**
+ * Add your beans here.
+ *
  * @author <a href="mailto:daniel.danis@jax.org">Daniel Danis</a>
- * @version 0.0.1
- * @since 0.0
  */
 @Configuration
 public class MyApplicationConfiguration {
@@ -19,10 +19,12 @@ public class MyApplicationConfiguration {
         this.env = env;
     }
 
+
     @Bean
     public String helloWorld() {
         return "\nHello world!\n";
     }
+
 
     @Bean
     public String helloUniverse() {
