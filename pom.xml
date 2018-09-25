@@ -7,6 +7,7 @@
     <groupId>com.genestalker.archetype</groupId>
     <artifactId>SpringBootArchetype</artifactId>
     <version>1.0.0</version>
+    <name>Spring Boot archetype for bioinformatics</name>
     <description>Spring Boot app packed with the most useful libraries for bioinformatics</description>
 
     <parent>

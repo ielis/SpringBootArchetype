@@ -11,6 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Main {
 
+    /* Adjust ASCII art of the banner here - http://patorjk.com/software/taag-v1/
+     * Font e.g. Big Money-nw
+     */
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
     }
