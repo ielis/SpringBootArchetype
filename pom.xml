@@ -4,7 +4,7 @@
 
     <groupId>com.genestalker.archetype</groupId>
     <artifactId>SpringBootArchetype</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4-SNAPSHOT</version>
     <name>Spring Boot archetype for bioinformatics</name>
     <description>Spring Boot app with some useful libraries for bioinformatics</description>
 
@@ -37,7 +37,7 @@
         <connection>scm:git:git@github.com:ielis/SpringBootArchetype.git</connection>
         <developerConnection>scm:git:git@github.com:ielis/SpringBootArchetype.git</developerConnection>
         <url>https://github.com/ielis/SpringBootArchetype</url>
-        <tag>v1.0.3</tag>
+        <tag>v@{project.version}</tag>
     </scm>
 
     <distributionManagement>
