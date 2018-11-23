@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * The main class of the app.
  *
- * @author <a href="mailto:daniel.danis@jax.org">Daniel Danis</a>
  */
 @SpringBootApplication
 public class Main {

@@ -6,9 +6,9 @@
 
     <groupId>com.genestalker.archetype</groupId>
     <artifactId>SpringBootArchetype</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <name>Spring Boot archetype for bioinformatics</name>
-    <description>Spring Boot app packed with the most useful libraries for bioinformatics</description>
+    <description>Spring Boot app with some useful libraries for bioinformatics</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -18,9 +18,16 @@
 
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+
+        <encoding>UTF-8</encoding>
+        <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+        <project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
+        <archetype.encoding>${encoding}</archetype.encoding>
+
 
         <jannovar.version>0.26</jannovar.version>
         <htsjdk.version>2.9.1</htsjdk.version>
@@ -28,11 +35,30 @@
 
     </properties>
 
+    <scm>
+        <connection>scm:git:git@github.com:ielis/SpringBootArchetype.git</connection>
+        <developerConnection>scm:git:git@github.com:ielis/SpringBootArchetype.git</developerConnection>
+        <url>https://github.com/ielis/SpringBootArchetype</url>
+        <tag>v@{project.version}</tag>
+    </scm>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <goals>pre-integration-test</goals>
+                    <preparationGoals>package</preparationGoals>
+                    <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <remoteTagging>false</remoteTagging>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -41,6 +67,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+
+        <!-- argparse4j used for parsing the command line -->
+        <dependency>
+            <groupId>net.sourceforge.argparse4j</groupId>
+            <artifactId>argparse4j</artifactId>
+            <version>0.8.1</version>
         </dependency>
 
         <dependency>

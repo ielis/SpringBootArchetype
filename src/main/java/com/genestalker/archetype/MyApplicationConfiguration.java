@@ -9,7 +9,6 @@ import org.springframework.core.env.Environment;
 /**
  * Add your beans here.
  *
- * @author <a href="mailto:daniel.danis@jax.org">Daniel Danis</a>
  */
 @Configuration
 public class MyApplicationConfiguration {
@@ -35,5 +34,17 @@ public class MyApplicationConfiguration {
     public String helloUniverse() {
         LOGGER.debug("Initializing the 'Hello universe' bean");
         return env.getProperty("hello.universe");
+    }
+
+
+    @Bean
+    public String projectName() {
+        return env.getProperty("project.name");
+    }
+
+
+    @Bean
+    public String projectVersion() {
+        return MyApplicationConfiguration.class.getPackage().getImplementationVersion();
     }
 }
