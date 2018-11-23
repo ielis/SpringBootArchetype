@@ -5,7 +5,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 /**
- * App's logic belong here
+ * App's logic belongs here
  */
 @Component
 public class MyApplicationRunner implements ApplicationRunner {
